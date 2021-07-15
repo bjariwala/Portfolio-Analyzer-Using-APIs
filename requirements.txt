@@ -1,0 +1,6 @@
+requests
+# dotenv
+pandas
+alpaca_trade_api
+# json
+# MCForecastTools
