@@ -6,6 +6,6 @@ import requests
 import json
 
 test = CoinbaseClient(api, secret, passphrase)
-print(test.historical_data('BTC-USD', 86400).tail())
+print(test.historical_data('DOGE-USD', 86400))
 
 

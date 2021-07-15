@@ -41,7 +41,7 @@ class CoinbaseClient:
         self.url = 'https://api.pro.coinbase.com/'
 
     def get(self, path: str, params: Optional[Dict[str, Any]] = None) -> Any:
-        r = requests.get(self.url + path, auth=self.auth).json()
+        r = requests.get(self.url + path, auth=self.auth, params=params).json()
         return r
 
     def historical_data(self, pair, timeframe):
