@@ -1,6 +1,5 @@
 requests
-# dotenv
+python-dotenv
 pandas
 alpaca_trade_api
-# json
 # MCForecastTools
