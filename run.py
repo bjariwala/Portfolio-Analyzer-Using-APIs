@@ -19,4 +19,18 @@ print('-----', cb_api_key, cb_secret, cb_passphrase)
 test = CoinbaseClient(cb_api_key, cb_secret, cb_passphrase)
 print(test.historical_data('BTC-USD', 86400))
 
+alpaca_api_key = os.getenv("alpaca_trade_api")
+alpaca_secret_key = os.getenv("alpaca_secret_key")
+
+api = tradeapi.REST(
+    alpaca_api_key,
+    alpaca_secret_key,
+    api_version = "v2"
+)
+ticker = "SPY"
+
+timeframe = "1D"
+
+start_date = pd.Timestamp("2015-05-04", tz="America/New_York").isoformat()
+end_date = pd.Timestamp("2020-05-04", tz="America/New_York").isoformat()
 
