@@ -44,8 +44,9 @@ class CoinbaseClient:
         r = requests.get(self.url + path, auth=self.auth, params=params).json()
         return r
 
-    def historical_data(self, pair, timeframe):
-        info = self.get(f'products/{pair}/candles', {'granularity': timeframe})
+    def historical_data(self, pair, timeframe, start):
+        start = pd.Timestamp(f"{start}", tz="America/New_York").isoformat()
+        info = self.get(f'products/{pair}/candles', {'start': start, 'granularity': timeframe})
         data = pd.DataFrame(data=info, columns=['Time', 'Low', 'High', 'Open', 'Close', 'Volume'])
         return data
 
