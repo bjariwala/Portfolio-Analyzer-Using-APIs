@@ -36,20 +36,10 @@ def data(sector):
     return df_tickers
 
 
-industrial_closes = pd.DataFrame()
-health_care_closes = pd.DataFrame()
-info_tech_closes = pd.DataFrame()
-com_services_closes = pd.DataFrame()
-consumer_staples_closes = pd.DataFrame()
-consumer_discretionary_closes = pd.DataFrame()
-utilities_closes = pd.DataFrame()
-financials_closes = pd.DataFrame()
-materials_closes = pd.DataFrame()
-real_estate_closes = pd.DataFrame()
-energy_closes = pd.DataFrame()
-
-
-def closes(sector, dataframe):
+def closes(sector):
+    closes_df = pd.DataFrame()
     ohlc = data(sector)
     for stocks in sector:
-        dataframe[stocks] = ohlc[stocks]['close']
+        closes_df[stocks] = ohlc[stocks]['close']
+    return closes_df
+

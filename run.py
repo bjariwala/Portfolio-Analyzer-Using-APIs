@@ -4,16 +4,13 @@ from MCForecastTools import MCSimulation
 
 sectors = [industrial, health_care, info_tech, com_services, consumer_staples, consumer_discretionary, utilities,
            financials, materials, real_estate, energy]
-sectors_dfs = [industrial_closes, health_care_closes, info_tech_closes, com_services_closes, consumer_staples_closes,
-               consumer_discretionary_closes, utilities_closes, financials_closes, materials_closes, real_estate_closes,
-               energy_closes]
 
 conservative_portfolio = []
 moderate_portfolio = []
 aggressive_portfolio = []
 a = 0
 while a < len(sectors):
-    test = calc(sectors[a], sectors_dfs[a])
+    test = calc(sectors[a])
     x = 0
     while x < len(test.beta):
         if test.beta.iloc[x] < 1 < test.sharpe_ratio.iloc[x]:
