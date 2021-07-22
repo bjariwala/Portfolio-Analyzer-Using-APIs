@@ -15,3 +15,6 @@ class Calculations:
         self.beta = self.covar.iloc[:, :].div(self.covar['SPY_Var'], axis=0).mean().drop('SPY_Var')
         self.sector_avg_beta = self.beta.mean()
 
+
+# test = Calculations(industrial)
+# print(test.annualized_avg.mean())
