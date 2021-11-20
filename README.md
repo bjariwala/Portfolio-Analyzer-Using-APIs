@@ -1,4 +1,4 @@
-Project Proposal
+Portfolio Analyzer
 
 Clients will be able to use this application to analyze different portfolios based on varies factors including portfolio weights between stocks in the S&P 500, bonds, and the top cryptocurrencies offered on Coinbase, the Sharpe ratios, and overall portfolio returns. There will be three different portfolio risk tolerances: conservative, moderate, and aggressive. The application will be accessing APIs from Alpaca and Coinbase to source the data. Portfolio simulations will be generated using the Monte Carlo Simulations to project the potential returns.
 
